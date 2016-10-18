@@ -1,0 +1,45 @@
+/* ----------------- Libraries
+----------------------------------------------------------------------- */ 
+//@import "compass";
+@import "config/reset";
+@import "config/variables";
+/* ----------------- Helpers
+----------------------------------------------------------------------- */
+@import "helpers/mixins";
+@import "helpers/helpers";
+@import "helpers/ie";
+/* ----------------- Base
+----------------------------------------------------------------------- */
+@import "base/layout";
+@import "base/typography";
+/* ----------------- Layout
+----------------------------------------------------------------------- */
+/* ----------------- Lib
+----------------------------------------------------------------------- */
+/* ----------------- Layout
+----------------------------------------------------------------------- */
+@import "layout/buttons";
+@import "layout/forms";
+@import "layout/icons";
+/* ----------------- Partials
+----------------------------------------------------------------------- */
+@import "partials/footer";
+@import "partials/header";
+/* ----------------- scss main
+----------------------------------------------------------------------- */
+body {
+}
+.container-block {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/login_bg.png) no-repeat;
+  background-size: cover;
+  ilter: blur(1px) grayscale(20%);
+  .wrapper-block {
+    max-width: 960px;
+    margin: auto;
+    .logo {
+        text-align: center;
+    }
+  }
+}
