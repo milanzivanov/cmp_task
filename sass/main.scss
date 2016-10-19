@@ -34,8 +34,8 @@ body {
   height: 100vh;
   background: url(../img/login_bg.png) no-repeat;
   background-size: cover;
-  filter: grayscale(60%);
-  //z-idex: 1;
+  //filter: grayscale(60%);
+  z-idex: 1;
   &:before {
     content: ' ';
     position: absolute;
@@ -63,21 +63,21 @@ body {
     }
     .login-block {
       h2, h3 {
-        font-size: 50px;
-        margin: 0 0 50px 0;
+        font-size: 72px;
+        margin: 0 0 70px 0;
         font-family: 'graphic-medium', sans-serif;
         font-weight: 700;
         color: #fff;
-        font-family: sans-serif;
+        latter-spacing: 0.15px;
       }
       h3 {
-        font-size: 27px;
+        font-size: 36px;
       }
       a {
         display: inline-block;
-        padding: 13px 25px;
-        width: 250px;
-        font-size: 15px;
+        padding: 18px 0;
+        width: 315px    ;
+        font-size: 18px;
         background: #fff;
         text-decoration: none;
         font-family: 'graphic-medium', sans-serif;
