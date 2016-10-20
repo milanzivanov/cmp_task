@@ -65,10 +65,10 @@ body {
       h2, h3 {
         font-size: 72px;
         margin: 0 0 70px 0;
-        font-family: 'graphic-medium', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-weight: 700;
         color: #fff;
-        latter-spacing: 0.15px;
+        letter-spacing: 0.15px;
       }
       h3 {
         font-size: 36px;
@@ -80,15 +80,15 @@ body {
         font-size: 18px;
         background: #fff;
         text-decoration: none;
-        font-family: 'graphic-medium', sans-serif;
+        font-family: 'Lato', sans-serif;
         color: #005ebc;
         text-transform: uppercase;
         font-weight: bold;
+        cursor: pointer;
       }
     }
   }
 }
-
 // step 10 start
 .main-box {
   width: 100%;
@@ -99,17 +99,116 @@ body {
   .nav {
     flex: 1 1 20%;
     background: #fafafa;
-   -webkit-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    z-index: 9;
+    position: relative;
     .nav-header {
         background: #bd1934;
         padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav-header_logo {
+        }
+        .nav-header_create {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                font-family: sans-serif;
+                margin: 0 10px 0 0;
+                text-transform: uppercase;
+                cursor: pointer;
+                .fa-plus {
+                    margin-right: 10px;
+                }
+                .fa-caret-down {
+                    margin-left: 25px;
+                }
+            }           
+        }
+    }
+    .navigation-link {
+        width: 100%;
+        ul {
+            width: 100%;
+            li {
+                a {
+                    display: block;
+                    padding: 18px;
+                    text-decoration: none;
+                    border-bottom: 1px solid #ccc;
+                    font-family: lato;
+                    color: #6f7c82;
+                    font-size: 16px;
+                    cursor: pointer;
+                    span {
+                        background: #ccc;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 30px;
+                        margin-right: 10px;
+                        color: #fff;
+                    }
+                    .active {
+                        color: #fff;
+                        background: #000;
+                    }
+                }
+                .active {
+                    color: #000;
+                }
+            }
+        }
     }
   }
   .container {
     flex: 1 1 60%;
     background: #ebebeb;
+    padding: 10px;
+    font-family: lato;
+    position: relative;
+    .container-header {
+        width: 100%;
+        float: left;
+        padding: 20px 0;
+        border-bottom: 1px solid #cccccc;
+        .container-header_text {
+            float: left;
+            h2, h3 {
+                color: #6f7c82;
+                display: block;
+                padding: 5px 0;
+            }
+            h2 {
+                font-size: 24px;
+                line-leigh: 30px;
+            } 
+            h3 {
+                font-size: 20px;
+            }        
+        }
+
+        .container-header_botton {
+            float: right;
+            position: absolute;;
+            color: #6f7c82;
+            background: #e5e5e5;
+            padding: 33px 10px;top: 0;
+            right: 10px;
+        }    
+    }    
   }
   .right {
     flex: 1 1 20%;
