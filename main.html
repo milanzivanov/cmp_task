@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link href="node_modules/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <link rel="icon" type="img/ico" href="favicon.ico">
 </head>
@@ -20,9 +21,9 @@
                 </a>
                 <div class="nav-header_create">
                     <a href="javascript:;">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="mdi mdi-plus mdi-24px"></i> 
                         <span>create</span>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>                       
+                    <i class="mdi mdi-menu-down mdi-24px"></i>                       
                     </a>
                 </div>                
             </div>  
@@ -48,9 +49,100 @@
                     user area &amp; options
                 </a>
             </div>
+            <div class="container-input">
+                <div class="container-input_project">
+                    <label for="name">Culture Project Name</label>
+                    <input type="text" name="text" id="name" placeholder="Type name for your Culture Project">                    
+                </div>
+                <div class="container-input_project">
+                    <label for="survey">Survey Name</label>
+                    <input type="text" name="text" id="survey" placeholder="Type name for your Survey">                   
+                </div>
+                <div class="container-input_project">
+                    <label for="goal">Culture Project Goal</label>
+                    <textarea rows="20" cols="50" id="goal">Describe your Culture Project Goal...
+                    </textarea>                    
+                </div>                                     
+            </div>
+            <div class="container-checkbox">
+                <h3>Choose survey type</h3>
+                <div class="container-checkbox_box">
+                    <div class="box-text">
+                        <h4>Trust INDEX SURVEY</h4>
+                        <P>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque necessitatibus reiciendis eligendi, aliquid ea incidunt saepe omnis ullam tempore doloribus. Quae inventore culpa qui iure quo omnis dolores delectus corrupti!
+                        </P>
+                    </div>
+                    <div class="box-checkbox">
+                        <input type="checkbox" id="toggle1" />
+                        <label for="toggle1" >
+                            <span>
+                                <i class="mdi mdi-check-circle mdi-24px"></i>
+                            <span/>
+                        </label>
+                    </div>
+                </div>
+                <div class="container-checkbox_box">
+                    <div class="box-text">
+                        <h4>Pulse survey</h4>
+                        <P>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque necessitatibus reiciendis eligendi
+                        </P>
+                    </div>
+                    <div class="box-checkbox">
+                        <input type="checkbox" id="toggle2" />
+                        <label for="toggle2" >
+                            <span>
+                                <i class="mdi mdi-check-circle mdi-24px"></i>
+                            <span/>
+                        </label>
+                    </div>
+                </div>
+                <div class="container-checkbox_box">
+                    <div class="box-text">
+                        <h4>FULL CULTURE VIEW</h4>
+                        <P>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque necessitatibus reiciendis eligendi, aliquid ea incidunt saepe omnis.
+                        </P>
+                    </div>
+                    <div class="box-checkbox">
+                        <input type="checkbox" id="toggle3" />
+                        <label for="toggle3" >
+                            <span>
+                                <i class="mdi mdi-check-circle mdi-24px"></i>
+                            <span/>
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
-        <aside class="right">
-            right
+        <aside class="container-info">
+              <div class="container-info_box">
+                  <h2>Project info</h2>
+                  <h3>Progress &amp; validation</h3>
+              </div>
+              <div class="container-info_compl">
+                  <h2>project completeness 0%</h2>
+                  <div class="info-scalla"></div>
+              </div>
+              <div class="container-info_nav">
+                  <h3>required info</h3>
+                  <ul>
+                      <li>
+                          <a href="javascript:;"><i class="mdi mdi-close"></i> Culture project name
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:;"><i class="mdi mdi-close"></i>Survey name</a>
+                      </li>
+                      <li>
+                          <a href="javascript:;"><i class="mdi mdi-close"></i>Culture project goal</a>
+                      </li>
+                      <li>
+                          <a href="javascript:;"><i class="mdi mdi-close"></i>Survey type</a>
+                      </li>
+                  </ul>
+              </div>
         </aside>
     </main>
 
