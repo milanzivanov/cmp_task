@@ -254,7 +254,8 @@ body {
           color: #6f7c82;
           font-size: 16px;
           cursor: pointer;
-          border-bottom: 1px solid #cccccc; }
+          border-bottom: 1px solid #cccccc;
+          transition: all 0.3s ease-in-out; }
           .main-box .nav .navigation-link ul li a span {
             background: #ccc;
             border-radius: 50%;
@@ -268,8 +269,11 @@ body {
           .main-box .nav .navigation-link ul li a .active {
             color: #fff;
             background: #000; }
-        .main-box .nav .navigation-link ul li .active {
+        .main-box .nav .navigation-link ul li a.active {
           color: #000; }
+          .main-box .nav .navigation-link ul li a.active > span {
+            color: #fff;
+            background: #000; }
   .main-box .container {
     flex: 1 1 60%;
     background: #ebebeb;
