@@ -29,6 +29,7 @@
 ----------------------------------------------------------------------- */
 body {
     font-family: 'lato-black', sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
     ::-webkit-input-placeholder  { color: #ccc; } /* Webkit */
     :-moz-placeholder { color: #ccc; }  /* Firefox <= 18 */
@@ -64,7 +65,8 @@ body {
         text-align: center;
         margin: 0 0 50px 0;
         img {
-          cursor: pointer;        }
+          cursor: pointer;
+      }
     }
     .login-block {
       h2, h3 {
@@ -147,11 +149,11 @@ body {
                     display: block;
                     padding: 18px;
                     text-decoration: none;
-                    border-bottom: 1px solid #ccc;
-                    font-family: lato;
                     color: #6f7c82;
                     font-size: 16px;
                     cursor: pointer;
+                    border-bottom: 1px solid #cccccc;
+                    transition: all 0.3s ease-in-out;
                     span {
                         background: #ccc;
                         border-radius: 50%;
@@ -168,8 +170,12 @@ body {
                         background: #000;
                     }
                 }
-                .active {
+                a.active {
                     color: #000;
+                    > span {
+                        color: #fff;
+                        background: #000;
+                    }
                 }
             }
         }
@@ -179,8 +185,10 @@ body {
     flex: 1 1 60%;
     background: #ebebeb;
     padding: 20px 30px;
-    font-family: lato;
     position: relative;
+    -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
     .container-header {
         width: 100%;
         float: left;
@@ -293,12 +301,12 @@ body {
                     align-items: center;
                     cursor: pointer;
                     span {
-                        .mdi-check-circle {
+                        .mdi-check-circle-outline {
                             display: none;
                         }
                     }
                 }
-                input[type=checkbox]:checked ~ label span .mdi-check-circle {
+                input[type=checkbox]:checked ~ label span .mdi-check-circle-outline {
                   display: block;
                   cursor: pointer;
                 }
@@ -308,25 +316,133 @@ body {
   }
   .container-info {
     flex: 1 1 20%;
+    position: relative;
     background: #fff;
     -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.65);
     -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.65);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
-    padding: 10px;
+    padding: 10px 30px;
     .container-info_box {
         color: #6f7c82;
         font-size: 20px;
-        padding: 15px 10px;
+        padding: 15px 0;
         font-family: sans-serif;
         border-bottom: 1px solid #ccc;
         h2 {
             font-size: 24px;
-            padding: 0 0 5px 0;
+            padding: 0 0 17px 0;
         }
         h3 {
-            font-size: 20px;
+            font-size: 18px;
+            padding: 0 0 10px 0;
         }
-    }  
+    }
+    .container-info_compl {
+        width: 100%;
+        padding: 10px 0 30px 0;
+        h2 {
+          font-size: 18px;
+          color: #444;
+          padding: 10px 0;
+          text-transform: uppercase;
+        }
+        .info-scale {
+            width: 100%;
+            height: 5px;
+            background: #ebebeb;
+            margin: 10px 0;
+        }
+    }
+    .container-info_nav {
+        width: 100%;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+        h3 {
+            text-transform: uppercase;
+            padding: 15px 0;
+            line-height: 25px;
+            color: #6f7c82;
+        }
+        ul {
+            width: 100%;
+            li {
+                a {
+                    text-decoration: none;
+                    color: #6f7c82;
+                    padding: 15px 0;
+                    display: block;
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    .mdi.mdi-close {
+                        color: #bfbfbf;
+                        margin-right: 15px;
+                        cursor: pointer;
+                    }
+                    .mdi-mdi-check {
+                        margin-right: 15px;
+                    }
+                }
+                // experiment
+                input[type=checkbox] {
+                    display: none;
+                }
+                .mdi-check {
+                    display: none;
+                }
+                input[type=checkbox]:checked ~ label span .mdi-close {
+                    display: none;
+                }
+                input[type=checkbox]:checked ~ a {
+                    color: red;
+                }
+                input[type=checkbox]:checked ~ label span .mdi-check {
+                    display: block;
+                    color: #000;
+                    margin-right: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .container-info_botton {
+        position: absolute;
+        bottom: 20px;
+        /* left: 30px; */
+        /* right: 30px; */
+        width: calc(100% - 30px);
+        /* width: calc(100% - 100px); */
+        padding: 0 30px 0 0;
+        .info-botton_back, .info-botton_next {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 15px;
+            background: #ebebeb;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .info-botton_back {
+            color: #000;
+        }
+        .info-botton_next {
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 15px 40px 15px 40px;
+            span {
+                color: #ccc;
+                text-transform: uppercase;
+                font-size: 14px;
+                padding: 0 20px 0 0;
+            }
+        }     
+    }
 }
 }
 

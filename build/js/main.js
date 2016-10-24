@@ -1,1 +1,1 @@
-"use strict";function testGulp(t,u){return t*u}
+"use strict";$(document).ready(function(i){i(".mdi-menu-down, .mdi-plus").on("click",function(){alert("radi!!!")}),i(".navigation-link ul li a").on("click",function(){i(".navigation-link ul li a, .navigation-link ul li a span").removeClass("active"),i(this).addClass("active")})});

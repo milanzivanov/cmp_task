@@ -1,5 +1,12 @@
 'use strict'
-function testGulp(arg1,arg2) {
-    return (arg1 * arg2);
-}
-//alert(testGulp(10, 10));
+$(document).ready(function($){
+    $(".mdi-menu-down, .mdi-plus").on("click", function(){
+        alert("radi!!!");
+    });
+
+    $(".navigation-link ul li a").on('click', function() {
+        $(".navigation-link ul li a, .navigation-link ul li a span").removeClass('active');
+        $(this).addClass('active');
+    });
+    
+});
