@@ -1,5 +1,5 @@
 /* ----------------- Libraries
------------------------------------------------------------------------ */ 
+----------------------------------------------------------------------- */
 //@import "compass";
 @import "config/reset";
 @import "config/variables";
@@ -41,7 +41,7 @@ body {
   height: 100vh;
   background: url(../img/login_bg.png) no-repeat;
   background-size: cover;
-  z-idex: 1;
+  z-index: 1;
   &:before {
     content: ' ';
     position: absolute;
@@ -69,6 +69,7 @@ body {
       }
     }
     .login-block {
+
       h2, h3 {
         font-size: 72px;
         margin: 0 0 70px 0;
@@ -79,18 +80,60 @@ body {
       h3 {
         font-size: 36px;
       }
-      a {
+      .login-block_btn {
+        /*relative positioning for list items along with overflow hidden to contain the overflowing ripple*/
+        position: relative;
+        overflow: hidden;	/*relative positioning for list items along with overflow hidden to contain the overflowing ripple*/
+      	position: relative;
+      	overflow: hidden;
+
+
         display: inline-block;
         padding: 18px 0;
         width: 315px    ;
         font-size: 18px;
         background: #fff;
         text-decoration: none;
-        color: #005ebc;
+        // color: #005ebc;
         text-transform: uppercase;
         font-weight: bold;
         cursor: pointer;
+
+        a {
+
+          //font: normal 14px/28px Montserrat;
+          //color: hsl(180, 40%, 40%);
+          color: #005ebc;
+          display: block;
+          //padding: 10px 15px;
+          text-decoration: none;
+          cursor: pointer; /*since the links are dummy without href values*/
+          /*prevent text selection*/
+          user-select: none;
+          /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
+          position: relative;
+
+        }
+
+        /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+        .ink {
+          display: block;
+          position: absolute;
+          background: hsl(180, 40%, 80%);
+          border-radius: 100%;
+          transform: scale(0);
+        }
+        /*animation effect*/
+        .ink.animate {animation: ripple 0.65s linear;}
+        @keyframes ripple {
+          /*scale the element to 250% to safely cover the entire link and fade it out*/
+          100% {opacity: 0;
+                transform: scale(2.5);
+              }
+        }
       }
+
+
     }
   }
 }
@@ -137,7 +180,7 @@ body {
                 .mdi-menu-down {
                     margin-left: 25px;
                 }
-            }           
+            }
         }
     }
     .navigation-link {
@@ -204,10 +247,10 @@ body {
             h2 {
                 font-size: 24px;
                 line-height: 30px;
-            } 
+            }
             h3 {
                 font-size: 20px;
-            }        
+            }
         }
         .container-header_botton {
             font-size: 18px;
@@ -219,7 +262,7 @@ body {
             padding: 33px 52px 33px 30px;
             top: 0;
             right: 30px;
-        }    
+        }
     }
     .container-input {
         width: 50%;
@@ -312,7 +355,7 @@ body {
                 }
             }
         }
-    }  
+    }
   }
   .container-info {
     flex: 1 1 20%;
@@ -441,12 +484,7 @@ body {
                 font-size: 14px;
                 padding: 0 20px 0 0;
             }
-        }     
+        }
     }
 }
 }
-
-
-
-
-
