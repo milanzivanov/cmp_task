@@ -224,7 +224,7 @@ body {
       .container-block .wrapper-block .login-block .login-block_btn .ink {
         display: block;
         position: absolute;
-        background: #b8e0e0;
+        background: #6f7c82;
         border-radius: 100%;
         transform: scale(0); }
       .container-block .wrapper-block .login-block .login-block_btn .ink.animate {
@@ -284,7 +284,7 @@ body {
           position: relative;
           overflow: hidden;
           /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
-          /*animation effect*/ }
+          /* animation effect */ }
           .main-box .nav .navigation-link ul li a {
             display: block;
             padding: 18px;
@@ -318,7 +318,7 @@ body {
           .main-box .nav .navigation-link ul li .ink {
             display: block;
             position: absolute;
-            background: #b8e0e0;
+            background: #6f7c82;
             border-radius: 100%;
             transform: scale(0); }
           .main-box .nav .navigation-link ul li .ink.animate {
@@ -360,14 +360,19 @@ body {
           font-size: 20px; }
       .main-box .container .container-header .container-header_botton {
         font-size: 18px;
-        font-lenght: 25px;
+        line-height: 25px;
         float: right;
         position: absolute;
         color: #6f7c82;
         background: #e5e5e5;
         padding: 33px 52px 33px 30px;
         top: 0;
-        right: 30px; }
+        right: 30px;
+        transition: all 0.3s ease;
+        cursor: pointer; }
+        .main-box .container .container-header .container-header_botton:hover {
+          background: #6f7c82;
+          color: #e5e5e5; }
     .main-box .container .container-input {
       width: 50%;
       float: left; }
@@ -520,8 +525,6 @@ body {
     .main-box .container-info .container-info_botton {
       position: absolute;
       bottom: 20px;
-      /* left: 30px; */
-      /* right: 30px; */
       width: calc(100% - 30px);
       /* width: calc(100% - 100px); */
       padding: 0 30px 0 0; }
@@ -542,7 +545,9 @@ body {
         color: #fff;
         padding: 15px 40px 15px 40px; }
         .main-box .container-info .container-info_botton .info-botton_next span {
-          color: #ccc;
+          color: #000;
           text-transform: uppercase;
           font-size: 14px;
           padding: 0 20px 0 0; }
+        .main-box .container-info .container-info_botton .info-botton_next .cmp_icon {
+          color: #000; }

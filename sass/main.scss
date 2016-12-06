@@ -122,7 +122,8 @@ body {
         .ink {
           display: block;
           position: absolute;
-          background: hsl(180, 40%, 80%);
+          //background: hsl(180, 40%, 80%);
+          background: #6f7c82;
           border-radius: 100%;
           transform: scale(0);
         }
@@ -135,8 +136,6 @@ body {
               }
         }
       }
-
-
     }
   }
 }
@@ -246,19 +245,19 @@ body {
                 /// http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design
                 /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
                 .ink {
-                	display: block; position: absolute;
-                	background: hsl(180, 40%, 80%);
+                	display: block;
+                    position: absolute;
+                	//background: hsl(180, 40%, 80%);
+                    background: #6f7c82;
                 	border-radius: 100%;
                 	transform: scale(0);
                 }
-                /*animation effect*/
+                /* animation effect */
                 .ink.animate {animation: ripple 0.65s linear;}
                 @keyframes ripple {
                 	/*scale the element to 250% to safely cover the entire link and fade it out*/
                 	100% {opacity: 0; transform: scale(2.5);}
                 }
-
-
 
                 a.active {
                     color: #000;
@@ -304,7 +303,7 @@ body {
         }
         .container-header_botton {
             font-size: 18px;
-            font-lenght: 25px;
+            line-height: 25px;
             float: right;
             position: absolute;;
             color: #6f7c82;
@@ -312,6 +311,12 @@ body {
             padding: 33px 52px 33px 30px;
             top: 0;
             right: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover {
+                background: #6f7c82;
+                color: #e5e5e5;
+            }
         }
     }
     .container-input {
@@ -505,8 +510,6 @@ body {
     .container-info_botton {
         position: absolute;
         bottom: 20px;
-        /* left: 30px; */
-        /* right: 30px; */
         width: calc(100% - 30px);
         /* width: calc(100% - 100px); */
         padding: 0 30px 0 0;
@@ -529,10 +532,13 @@ body {
             color: #fff;
             padding: 15px 40px 15px 40px;
             span {
-                color: #ccc;
+                color: #000;
                 text-transform: uppercase;
                 font-size: 14px;
                 padding: 0 20px 0 0;
+            }
+            .cmp_icon {
+                color: #000;
             }
         }
     }
