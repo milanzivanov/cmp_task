@@ -278,33 +278,62 @@ body {
       width: 100%; }
       .main-box .nav .navigation-link ul {
         width: 100%; }
-        .main-box .nav .navigation-link ul li a {
-          display: block;
-          padding: 18px;
-          text-decoration: none;
-          color: #6f7c82;
-          font-size: 16px;
-          cursor: pointer;
-          border-bottom: 1px solid #cccccc;
-          transition: all 0.3s ease-in-out; }
-          .main-box .nav .navigation-link ul li a span {
-            background: #ccc;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: inline-block;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 10px;
-            color: #fff; }
-          .main-box .nav .navigation-link ul li a .active {
-            color: #fff;
-            background: #000; }
-        .main-box .nav .navigation-link ul li a.active {
-          color: #000; }
-          .main-box .nav .navigation-link ul li a.active > span {
-            color: #fff;
-            background: #000; }
+        .main-box .nav .navigation-link ul li {
+          list-style-type: none;
+          /*relative positioning for list items along with overflow hidden to contain the overflowing ripple*/
+          position: relative;
+          overflow: hidden;
+          /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+          /*animation effect*/ }
+          .main-box .nav .navigation-link ul li a {
+            display: block;
+            padding: 18px;
+            text-decoration: none;
+            color: #6f7c82;
+            font-size: 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #cccccc;
+            transition: all 0.3s ease-in-out;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+            /*since the links are dummy without href values*/
+            /*prevent text selection*/
+            user-select: none;
+            /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
+            position: relative; }
+            .main-box .nav .navigation-link ul li a span {
+              background: #ccc;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              display: inline-block;
+              text-align: center;
+              line-height: 30px;
+              margin-right: 10px;
+              color: #fff; }
+            .main-box .nav .navigation-link ul li a .active {
+              color: #fff;
+              background: #000; }
+          .main-box .nav .navigation-link ul li .ink {
+            display: block;
+            position: absolute;
+            background: #b8e0e0;
+            border-radius: 100%;
+            transform: scale(0); }
+          .main-box .nav .navigation-link ul li .ink.animate {
+            animation: ripple 0.65s linear; }
+
+@keyframes ripple {
+  /*scale the element to 250% to safely cover the entire link and fade it out*/
+  100% {
+    opacity: 0;
+    transform: scale(2.5); } }
+          .main-box .nav .navigation-link ul li a.active {
+            color: #000; }
+            .main-box .nav .navigation-link ul li a.active > span {
+              color: #fff;
+              background: #000; }
   .main-box .container {
     flex: 1 1 60%;
     background: #ebebeb;
