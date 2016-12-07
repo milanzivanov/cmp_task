@@ -9,10 +9,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link href="node_modules/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <link rel="icon" type="img/ico" href="favicon.ico">
 </head>
 <body>
+
+    <!-- Popup itself -->
+    <div id="test-popup" class="white-popup mfp-hide">
+      Popup content here...
+      <br />
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod necessitatibus, rem mollitia voluptatibus consequuntur, minima quas in impedit ad fugit, praesentium odit similique officia! Illo sapiente molestiae perferendis. Tenetur, quia?
+    </div>
+
     <main class="main-box">
         <nav class="nav">
             <div class="nav-header">
@@ -45,7 +54,7 @@
                     <h2>Culture project neme</h2>
                     <h3>Survey name</h3>
                 </div>
-                <a class="container-header_botton">
+                <a href="#test-popup" class="container-header_botton open-popup-link">
                     user area &amp; options
                 </a>
             </div>
@@ -203,6 +212,7 @@
     window.jQuery || document.write("<script src='node_modules/juery/dist/jquery.min.js'><\/script>");
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

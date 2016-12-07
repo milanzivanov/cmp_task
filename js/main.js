@@ -1,14 +1,13 @@
 'use strict'
 $(document).ready(function($){
     $(".mdi-menu-down, .mdi-plus").on("click", function(){
-        alert("radi!!!");
+        alert("Bu!!!");
     });
 
     $(".navigation-link ul li a").on('click', function() {
         $(".navigation-link ul li a, .navigation-link ul li a span").removeClass('active');
         $(this).addClass('active');
     });
-
 
     // http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design
     //jQuery time
@@ -41,6 +40,11 @@ $(document).ready(function($){
     })
 
 
-
+    // Example 1: From an element in DOM
+    // http://codepen.io/dimsemenov/pen/GEKgb
+    $('.open-popup-link').magnificPopup({
+      type:'inline',
+      midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    });
 
 });

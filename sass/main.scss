@@ -198,8 +198,6 @@ body {
             	position: relative;
             	overflow: hidden;
 
-
-
                 a {
                     display: block;
                     padding: 18px;
@@ -209,8 +207,6 @@ body {
                     cursor: pointer;
                     border-bottom: 1px solid #cccccc;
                     transition: all 0.3s ease-in-out;
-
-
 
                     //font: normal 14px/28px Montserrat;
                     //color: hsl(180, 40%, 40%);
@@ -222,7 +218,6 @@ body {
                 	user-select: none;
                 	/*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
                 	position: relative;
-
 
                     span {
                         background: #ccc;
@@ -240,7 +235,6 @@ body {
                         background: #000;
                     }
                 }
-
 
                 /// http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design
                 /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
@@ -313,6 +307,8 @@ body {
             right: 30px;
             transition: all 0.3s ease;
             cursor: pointer;
+            text-decoration: none;
+            outline: none;
             &:hover {
                 background: #6f7c82;
                 color: #e5e5e5;
@@ -391,7 +387,7 @@ body {
                     height: 20px;
                     background: transparent;
                     position: absolute;
-                    z-index: 9999999999;
+                    z-index: 9;
                     border: 2px solid #ccc;
                     border-radius: 50%;
                     display: flex;
@@ -496,7 +492,7 @@ body {
                     display: none;
                 }
                 input[type=checkbox]:checked ~ a {
-                    color: red;
+                    //color: red;
                 }
                 input[type=checkbox]:checked ~ label span .mdi-check {
                     display: block;
@@ -511,7 +507,6 @@ body {
         position: absolute;
         bottom: 20px;
         width: calc(100% - 30px);
-        /* width: calc(100% - 100px); */
         padding: 0 30px 0 0;
         .info-botton_back, .info-botton_next {
             display: inline-block;
@@ -523,6 +518,13 @@ body {
         }
         .info-botton_back {
             color: #000;
+            &:hover {
+                color: #e5e5e5;
+                background: #6f7c82;
+                > .cmp_icon {
+                    color: #e5e5e5;
+                }
+            }
         }
         .info-botton_next {
             float: right;
@@ -531,6 +533,7 @@ body {
             align-items: center;
             color: #fff;
             padding: 15px 40px 15px 40px;
+            transition: all 0.3s ease;
             span {
                 color: #000;
                 text-transform: uppercase;
@@ -540,7 +543,28 @@ body {
             .cmp_icon {
                 color: #000;
             }
+            &:hover {
+                background: #6f7c82;
+                > span {
+                    color: #e5e5e5;
+                }
+                > .cmp_icon {
+                    color: #e5e5e5;
+                }
+            }
         }
     }
 }
+}
+///////////////////////////////////
+// plugin magnic popup css 
+//////////////////////////////////
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 500px;
+  margin: 20px auto;
 }
