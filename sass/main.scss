@@ -557,14 +557,20 @@ body {
 }
 }
 ///////////////////////////////////
-// plugin magnic popup css 
+// plugin magnic popup css
 //////////////////////////////////
 
 .white-popup {
-  position: relative;
-  background: #FFF;
-  padding: 20px;
-  width:auto;
-  max-width: 500px;
-  margin: 20px auto;
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width:auto;
+    max-width: 500px;
+    margin: 20px auto;
+    svg {
+        height: 300px;
+        width: 300px;
+        margin: 10px auto;
+        display: block;
+    }
 }

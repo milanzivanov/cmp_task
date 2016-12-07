@@ -570,3 +570,8 @@ body {
   width: auto;
   max-width: 500px;
   margin: 20px auto; }
+  .white-popup svg {
+    height: 300px;
+    width: 300px;
+    margin: 10px auto;
+    display: block; }
