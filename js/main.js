@@ -5,8 +5,8 @@ $(document).ready(function($){
     });
 
     $(".navigation-link ul li a").on('click', function() {
-        $(".navigation-link ul li a, .navigation-link ul li a span").removeClass('active');
-        $(this).addClass('active');
+        $(".navigation-link ul li a, .navigation-link ul li a span").delay(1500).removeClass('active');
+        $(this).delay(1500).addClass('active');
     });
 
     // http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design
