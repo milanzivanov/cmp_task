@@ -11,18 +11,16 @@ $font-path: './fonts' !default;
 // }
 
 
-
 /* @font-face kit by Fonts2u (http://www.fonts2u.com) */
 @font-face {
     font-family:"lato-black";
-    src:url("fonts/Lato-Black.eot?") format("eot"),
+    src:url("fonts/Lato-Black.eot") format("eot"),
         url("fonts/Lato-Black.woff") format("woff"),
         url("fonts/Lato-Black.ttf") format("truetype"),
         url("fonts/Lato-Black.svg#Lato-Black") format("svg");
         font-weight:normal;
         font-style:normal;
 }
-
 
 @font-face {
   font-family: 'icomoon';
@@ -35,12 +33,23 @@ $font-path: './fonts' !default;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot');
+  src:  url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf') format('truetype'),
+        url('fonts/icomoon.woff') format('woff'),
+        url('fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // @font-face {
 // 	font-family: 'Whitney-Book';
-// 	src: url('css/fonts/Whitney-BookTTF/Whitney-Book.eot?#iefix') format('embedded-opentype'),
-// 		url('css/fonts/Whitney-BookTTF/Whitney-Book.woff') format('woff'),
-// 		url('css/fonts/Whitney-BookTTF/Whitney-Book.ttf') format('truetype'),
-// 		url('css/fonts/Whitney-BookTTF/Whitney-Book.svg#Whitney-Book') format('svg');
+// 	src: url('fonts/Whitney-BookTTF/Whitney-Book.eot?#iefix') format('embedded-opentype'),
+// 		url('fonts/Whitney-BookTTF/Whitney-Book.woff') format('woff'),
+// 		url('fonts/Whitney-BookTTF/Whitney-Book.ttf') format('truetype'),
+// 		url('fonts/Whitney-BookTTF/Whitney-Book.svg#Whitney-Book') format('svg');
 // 	font-weight: normal;
 // 	font-style: normal;
 // }
