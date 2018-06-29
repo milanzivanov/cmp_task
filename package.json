@@ -19,9 +19,9 @@
   "homepage": "https://github.com/milanzivanov/cmp_task#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^4.0.1",
     "gulp-uglify": "^2.0.0",
     "mdi": "^1.7.22",
-    "node-sass": "^3.13.0"
+    "node-sass": "^4.9.0"
   }
 }

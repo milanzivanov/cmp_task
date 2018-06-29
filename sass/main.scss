@@ -29,9 +29,9 @@
 ----------------------------------------------------------------------- */
 body {
     font-family: 'lato-black', sans-serif;
-    font-family: 'icomoon';
+    // font-family: 'icomoon';
     //font-family: 'Whitney-Book';
-    //font-family: sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
     ::-webkit-input-placeholder  { color: #ccc; } /* Webkit */
     :-moz-placeholder { color: #ccc; }  /* Firefox <= 18 */
@@ -149,7 +149,6 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  aligne-text: center;
   .nav {
     flex: 1 1 20%;
     background: #fafafa;
@@ -164,8 +163,6 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .nav-header_logo {
-        }
         .nav-header_create {
             position: relative;
             display: flex;
@@ -210,10 +207,7 @@ body {
                     border-bottom: 1px solid #cccccc;
                     transition: all 0.3s ease-in-out;
 
-                    //font: normal 14px/28px Montserrat;
-                    //color: hsl(180, 40%, 40%);
                 	display: block;
-                    //padding: 10px 15px;
                 	text-decoration: none;
                 	cursor: pointer; /*since the links are dummy without href values*/
                 	/*prevent text selection*/
@@ -494,7 +488,7 @@ body {
                     display: none;
                 }
                 input[type=checkbox]:checked ~ a {
-                    //color: red;
+                    color: red;
                 }
                 input[type=checkbox]:checked ~ label span .mdi-check {
                     display: block;
